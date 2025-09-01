@@ -932,32 +932,54 @@ section {
 .footer-section p {
     color: #cccccc;
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section p i {
+    color: #00ffff;
+    font-size: 1rem;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
 .social-links {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .social-link {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
     background: rgba(0, 255, 255, 0.1);
     border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 50%;
+    border-radius: 25px;
     color: #00ffff;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .social-link:hover {
     background: rgba(0, 255, 255, 0.2);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    border-color: rgba(0, 255, 255, 0.4);
+}
+
+.social-link i {
+    font-size: 1.1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.social-link span {
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
 .footer-bottom {
