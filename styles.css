@@ -38,12 +38,12 @@ body {
 
 .nav-container {
     max-width: 1400px;
-    margin: 10px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 80px;
 }
 
 .nav-logo .logo-image {
@@ -60,7 +60,11 @@ body {
 
 .nav-menu {
     display: flex;
+    align-items: center;
     gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
@@ -69,6 +73,9 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link:hover {
@@ -89,6 +96,46 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+.nav-register-btn {
+    background: linear-gradient(45deg, #00ffff, #00ff00);
+    color: #000000;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.nav-register-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-register-btn:hover::before {
+    left: 100%;
+}
+
+.nav-register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+    background: linear-gradient(45deg, #00ff00, #00ffff);
 }
 
 .nav-toggle {
@@ -113,7 +160,7 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 100px 0 50px;
+    padding: 80px 0 40px;
 }
 
 .hero-background {
@@ -152,27 +199,31 @@ body {
 .hero-content {
     text-align: center;
     z-index: 1;
-    max-width: 800px;
+    max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 120px);
 }
 
 .hero-title {
     margin-bottom: 2rem;
     text-align: center;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .hero-logo {
-    max-width: 800px;
+    max-width: 1200px;
     width: 100%;
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     filter: drop-shadow(0 0 40px rgba(0, 255, 255, 0.5));
     animation: logo-glow 3s ease-in-out infinite;
     transform: scale(1.05);
@@ -180,12 +231,12 @@ body {
 
 .title-sub {
     display: inline-block;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
     animation: subtitle-glow 4s ease-in-out infinite;
     white-space: nowrap;
@@ -208,14 +259,18 @@ body {
 }
 
 .hero-info {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .hero-info p {
     margin-bottom: 0.5rem;
-    font-size: 2.1rem;
+    font-size: 1.2rem;
     color: #cccccc;
 }
 
@@ -229,46 +284,100 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    margin-bottom: 3rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
 .stat-item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .stat-number {
     display: block;
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: 800;
     color: #00ffff;
     text-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
     margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
 .stat-label {
-    font-size: 1.7rem;
+    font-size: 1rem;
     color: #cccccc;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight: 600;
+}
+
+.countdown-container {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.countdown-title {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.countdown-timer {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    text-align: center;
+    min-width: 50px;
+}
+
+.countdown-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00ffff;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    line-height: 1;
+}
+
+.countdown-label {
+    font-size: 0.7rem;
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.2rem;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 1.5rem 4rem;
+    padding: 1.2rem 3rem;
     background: linear-gradient(45deg, #00ffff, #ff00ff);
     color: #000000;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
     transform: scale(1.05);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .cta-button:hover {
@@ -909,6 +1018,265 @@ section {
     color: #ff00ff;
 }
 
+/* Competition Categories Section */
+.categories {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%);
+}
+
+.categories-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.category-card {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 400px;
+    padding-top: 4rem;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+.category-video {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.category-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-video video {
+    transform: scale(1.05);
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 255, 0, 0.1) 100%);
+    color: #00ffff;
+    font-size: 3rem;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.video-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .video-placeholder::before {
+    transform: translateX(100%);
+}
+
+.video-placeholder i {
+    margin-bottom: 1rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.video-placeholder span {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.category-content {
+    padding: 2rem;
+}
+
+.category-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.category-content p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.category-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: linear-gradient(45deg, #00ffff, #00ff00);
+    color: #000000;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.category-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(45deg, #ff00ff, #00ff00);
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(255, 0, 255, 0.3);
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.category-link {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.category-link:hover {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* FAQ Section */
+.faq {
+    background: linear-gradient(135deg, rgba(255, 0, 255, 0.05) 0%, rgba(0, 255, 0, 0.05) 100%);
+}
+
+.faq-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: rgba(0, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+}
+
+.faq-question {
+    padding: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    flex: 1;
+}
+
+.faq-toggle {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.faq-toggle i {
+    color: #00ffff;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle i {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 0 2rem 2rem;
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* Footer */
 .footer {
     background: #000000;
@@ -1058,7 +1426,7 @@ section {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 80px;
         flex-direction: column;
         background-color: rgba(10, 10, 10, 0.95);
         width: 100%;
@@ -1066,6 +1434,8 @@ section {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+        align-items: center;
+        gap: 1rem;
     }
 
     .nav-menu.active {
@@ -1076,40 +1446,33 @@ section {
         display: flex;
     }
 
+    .nav-link {
+        padding: 0.8rem 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-register-btn {
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        width: auto;
+        justify-content: center;
+    }
+
     .hero-logo {
         max-width: 400px;
+        margin-bottom: 1rem;
     }
 
     .nav-logo .logo-image {
         height: 55px;
     }
 
-    .sponsor-logo-img {
-        max-width: 140px;
-        max-height: 100px;
-    }
-
-    .section-title {
-        font-size: 2.5rem;
-    }
-
-    .stat-number {
-        font-size: 2.8rem;
-    }
-
-    .prize-amount {
-        font-size: 2.8rem;
-    }
-
-    .cta-button {
-        padding: 1.2rem 3rem;
-        font-size: 1.2rem;
-    }
-
     .title-sub {
-        font-size: 2.5rem;
-        letter-spacing: 2px;
-        white-space: nowrap;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
     }
 
     .subtitle-text {
@@ -1119,23 +1482,54 @@ section {
     .hero-content {
         max-width: 100%;
         padding: 0 15px;
-        min-height: auto;
+        min-height: calc(100vh - 90px);
     }
 
     .hero {
-        padding: 80px 0 30px;
+        padding: 60px 0 30px;
+    }
+
+    .hero-info p {
+        font-size: 1rem;
     }
 
     .hero-stats {
-        flex-direction: column;
         gap: 1.5rem;
-        justify-content: center;
-        align-items: center;
+        margin-bottom: 1.5rem;
     }
 
-    .stat-item {
-        text-align: center;
-        width: 100%;
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    .countdown-container {
+        max-width: 350px;
+        padding: 1.2rem;
+    }
+
+    .countdown-timer {
+        gap: 0.6rem;
+    }
+
+    .countdown-item {
+        min-width: 45px;
+    }
+
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+
+    .countdown-label {
+        font-size: 0.6rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
     }
 
     .about-content {
@@ -1190,6 +1584,35 @@ section {
     .organizer-card.host .organizer-logo-img {
         max-width: 200px;
         max-height: 110px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .category-video {
+        height: 200px;
+    }
+
+    .category-content {
+        padding: 1.5rem;
+    }
+
+    .category-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .faq-question {
+        padding: 1.5rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+
+    .faq-answer p {
+        padding: 0 1.5rem 1.5rem;
     }
 
     .timeline-card {
@@ -1299,54 +1722,84 @@ section {
         padding: 0 15px;
     }
 
+    .hero {
+        padding: 50px 0 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0 10px;
+        min-height: calc(100vh - 70px);
+    }
+
     .hero-logo {
-        max-width: 320px;
+        max-width: 280px;
+        margin-bottom: 0.8rem;
     }
 
     .nav-logo .logo-image {
         height: 45px;
     }
 
-    .sponsor-logo-img {
-        max-width: 120px;
-        max-height: 80px;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-    }
-
-    .prize-amount {
-        font-size: 2.5rem;
-    }
-
-    .cta-button {
-        padding: 1rem 2.5rem;
-        font-size: 1.1rem;
-    }
-
     .title-sub {
-        font-size: 2rem;
-        letter-spacing: 1px;
-        white-space: nowrap;
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.8rem;
     }
 
     .subtitle-text {
         margin: 0 0.2rem;
     }
 
-    .hero-content {
-        max-width: 100%;
-        padding: 0 10px;
-        min-height: auto;
+    .hero-info p {
+        font-size: 0.9rem;
     }
 
-    .hero {
-        padding: 60px 0 20px;
+    .hero-stats {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .countdown-container {
+        max-width: 300px;
+        padding: 1rem;
+    }
+
+    .countdown-timer {
+        gap: 0.4rem;
+    }
+
+    .countdown-item {
+        min-width: 40px;
+    }
+
+    .countdown-number {
+        font-size: 1.2rem;
+    }
+
+    .countdown-label {
+        font-size: 0.5rem;
+    }
+
+    .countdown-title {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 
     .timeline-card {
