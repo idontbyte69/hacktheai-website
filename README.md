@@ -1,167 +1,87 @@
 # Hack The AI - Inter University Hackathon Website
 
-A modern, professional, and responsive single-page website for the "Hack The AI" inter-university hackathon. Built with HTML, CSS, and JavaScript featuring a futuristic AI design with dark theme and neon highlights.
+A modern, responsive single-page site for the "Hack The AI" inter‑university hackathon. Pure HTML, CSS, and a touch of JavaScript with a futuristic neon aesthetic.
 
-## 🚀 Features
+## 🚀 What’s included
 
-### Design & UI
-- **Dark Theme**: Full dark background with neon cyan, magenta, and green highlights
-- **Futuristic AI Design**: Gradient effects, glowing elements, and smooth animations
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
-- **Smooth Scrolling**: Seamless navigation between sections
-- **Interactive Elements**: Hover effects, animations, and dynamic content
+- Dark, glowing theme and smooth animations
+- Clickable scroll indicator to jump to About
+- Event Calendar (four cards) replacing the old vertical timeline
+- Registration Details cards (fee, team size, apply button + note)
+- Competition Categories with embedded Google Drive preview videos
+- Uniform category card heights with 16:9 video area
+- Updated footer (SmythOS + Event Organizer), social links in two columns, responsive bottom bar
+- SmythOS favicon added to the browser tab
 
-### Sections
-1. **Hero Section**: Main landing with title, stats, and registration CTA
-2. **About Section**: Event description and key features
-3. **Prizes & Opportunities**: Prize breakdown and additional benefits
-4. **Event Timeline**: Complete schedule of the hackathon
-5. **Sponsors & Partners**: Information about organizers and sponsors
-6. **Footer**: Contact information and social media links
+## 🛠 Tech
+- HTML5
+- CSS (Flexbox/Grid, responsive breakpoints)
+- Vanilla JavaScript
+- Google Fonts (Inter) and Font Awesome icons
 
-### Interactive Features
-- Mobile-responsive navigation with hamburger menu
-- Smooth scroll navigation
-- Parallax background effects
-- Floating particle animations
-- Typing effect for hero title
-- Scroll progress indicator
-- Countdown timer for registration deadline
-- Cursor trail effect
-- Intersection Observer animations
-- Hover effects on cards and buttons
+## ▶️ Run locally
+No build needed.
+1) Clone/download this repository
+2) Open `index.html` in any modern browser
 
-## 🛠️ Technologies Used
+Tip: Use a local server (e.g., VS Code Live Server) for best results with relative assets.
 
-- **HTML5**: Semantic markup structure
-- **CSS3**: Modern styling with Flexbox and Grid
-- **JavaScript (ES6+)**: Interactive functionality
-- **Font Awesome**: Icons
-- **Google Fonts**: Inter font family
-
-## 📱 Responsive Design
-
-The website is fully responsive and optimized for:
-- **Desktop**: 1200px+ (Full layout with side-by-side sections)
-- **Tablet**: 768px - 1199px (Adaptive grid layouts)
-- **Mobile**: < 768px (Stacked layout with mobile navigation)
-
-## 🎨 Color Scheme
-
-- **Primary Background**: #0a0a0a (Dark)
-- **Neon Cyan**: #00ffff (Primary accent)
-- **Neon Magenta**: #ff00ff (Secondary accent)
-- **Neon Green**: #00ff00 (Tertiary accent)
-- **Text Colors**: #ffffff (White), #cccccc (Light gray), #999999 (Gray)
-
-## 📋 Content Structure
-
-### Event Information
-- **Title**: Hack The AI
-- **Subtitle**: Inter University Hackathon
-- **Organizers**: Department of CSE & GUCC
-- **Powered by**: SmythOS
-- **Host**: Green University of Bangladesh
-
-### Prizes
-- **1st Place**: $300
-- **2nd Place**: $200
-- **3rd Place**: $100
-- **Additional**: Refreshments, gifts, job opportunities
-
-### Timeline
-- Registration Deadline: 10th September 2025
-- Preliminary Round: 14th–15th September 2025
-- Final Round (Online): 22nd–24th September 2025
-- Final Round (Onsite): 25th September 2025
-
-## 🚀 Getting Started
-
-1. Clone or download the project files
-2. Open `index.html` in a web browser
-3. The website will load with all animations and interactions
-
-## 📁 File Structure
-
+## 📁 Structure
 ```
 hacktheai-website/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and animations
-├── script.js           # JavaScript functionality
-└── README.md          # Project documentation
+├── Assets/                 # Images/logos/favicons
+├── index.html              # Main page
+├── styles.css              # Styles and animations
+├── script.js               # Interactions (FAQ toggles, etc.)
+└── README.md
 ```
 
-## 🎯 Key Features
+## ✏️ Common edits
 
-### Registration Integration
-- Direct link to Google Form: https://forms.gle/QvzXYQ3hdAHPkkWVA
-- Prominent CTA button with glow effects
-- Countdown timer to registration deadline
+### Change Competition Category videos (Google Drive)
+1) Ensure the Drive file is shared: Anyone with the link – Viewer.
+2) Convert the share URL to a preview URL:
+   - Share: `https://drive.google.com/file/d/FILE_ID/view`
+   - Preview (use in HTML): `https://drive.google.com/file/d/FILE_ID/preview`
+3) Replace the iframe `src` inside each `.category-video` in `index.html`.
 
-### Performance Optimizations
-- Optimized images and fonts
-- Smooth animations with CSS transforms
-- Efficient JavaScript event handling
-- Minimal external dependencies
-
-### Accessibility
-- Semantic HTML structure
-- Proper heading hierarchy
-- Alt text for icons
-- Keyboard navigation support
-- High contrast color scheme
-
-## 🔧 Customization
-
-### Colors
-Modify the CSS custom properties in `styles.css` to change the color scheme:
-```css
-:root {
-    --primary-color: #00ffff;
-    --secondary-color: #ff00ff;
-    --accent-color: #00ff00;
-    --background-color: #0a0a0a;
-}
+Example iframe:
+```html
+<iframe src="https://drive.google.com/file/d/FILE_ID/preview"
+        allow="autoplay; fullscreen" allowfullscreen loading="lazy"
+        style="width:100%; height:100%; border:0;"></iframe>
 ```
 
-### Content
-Update the content in `index.html` to modify:
-- Event details
-- Prize amounts
-- Timeline dates
-- Contact information
-- Social media links
+### Adjust Registration Details
+- Edit the fee, team size, and button link in the `#registration` section of `index.html`.
+- The currency icon uses the BDT symbol (৳).
 
-### Animations
-Adjust animation speeds and effects in `styles.css` and `script.js`:
-- Gradient shift animation
-- Particle movement
-- Scroll animations
-- Hover effects
+### Footer social links (two columns)
+- Links are in the footer under `.footer-links`. They’re auto-laid into two columns on desktop/tablet and one column on mobile.
 
-## 📞 Contact & Social Media
+### Favicon
+- The tab icon uses `Assets/SmythOS Favicon.png` via:
+```html
+<link rel="icon" type="image/png" href="Assets/SmythOS Favicon.png">
+<link rel="apple-touch-icon" href="Assets/SmythOS Favicon.png">
+```
+Replace with your own file if needed.
 
-The website includes placeholder links for:
-- GUCC Website
-- CSE Website
-- GUCC Facebook Page
-- GUCC Instagram Page
-- GUCC LinkedIn Page
+### Scroll arrow target
+- The down arrow under the hero CTA is a link to `#about`. Change the `href` to target another section if desired.
 
-Update the href attributes in the footer section to link to actual social media profiles.
+## 📣 Content quick‑reference
+- Registration form: `https://forms.gle/QvzXYQ3hdAHPkkWVA`
+- Key dates are in the Event Calendar in `index.html`.
 
-## 🎉 Browser Support
+## 🌐 Deploy
+Any static hosting works (GitHub Pages, Netlify, Vercel, Firebase Hosting, etc.).
+- Upload the repository, ensure `index.html` is served from the root.
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+## ✅ Browser support
+Latest Chrome, Edge, Firefox, and Safari (desktop and mobile).
 
 ## 📄 License
+This site is for the Hack The AI hackathon. All rights reserved.
 
-This project is created for the Hack The AI hackathon event. All rights reserved.
-
----
-
-**Built with ❤️ for the AI community**
+— Built with ❤️ for the AI community
