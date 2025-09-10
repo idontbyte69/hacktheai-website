@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Add countdown timer for registration deadline
 function createCountdown() {
-    const deadline = new Date('September 10, 2025 23:59:59').getTime();
+    const deadline = new Date('September 13, 2025 20:00:00').getTime();
     
     const countdownElement = document.createElement('div');
     countdownElement.style.position = 'fixed';
@@ -307,4 +307,154 @@ function createCursorTrail() {
 // Initialize cursor trail
 document.addEventListener('DOMContentLoaded', () => {
     createCursorTrail();
+});
+
+// Deadline Extension Popup Functionality
+function showDeadlinePopup() {
+    const popup = document.getElementById('deadlinePopup');
+    if (popup) {
+        // Check if popup was already dismissed in this session
+        const dismissed = sessionStorage.getItem('deadlinePopupDismissed');
+        if (!dismissed) {
+            setTimeout(() => {
+                popup.classList.add('show');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }, 1000); // Show popup after 1 second delay
+        }
+    }
+}
+
+function closeDeadlinePopup() {
+    const popup = document.getElementById('deadlinePopup');
+    if (popup) {
+        popup.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scrolling
+        // Mark as dismissed for this session
+        sessionStorage.setItem('deadlinePopupDismissed', 'true');
+        
+        // Show help popup after a short delay
+        setTimeout(() => {
+            showHelpPopup();
+        }, 500);
+    }
+}
+
+// Close popup when clicking outside
+document.addEventListener('click', (e) => {
+    const popup = document.getElementById('deadlinePopup');
+    if (e.target === popup) {
+        closeDeadlinePopup();
+    }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeDeadlinePopup();
+    }
+});
+
+// Help Popup Functionality
+function showHelpPopup() {
+    const popup = document.getElementById('helpPopup');
+    if (popup) {
+        // Check if help popup was already dismissed in this session
+        const dismissed = sessionStorage.getItem('helpPopupDismissed');
+        if (!dismissed) {
+            setTimeout(() => {
+                popup.classList.add('show');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }, 300); // Show popup after short delay
+        }
+    }
+}
+
+function closeHelpPopup() {
+    const popup = document.getElementById('helpPopup');
+    if (popup) {
+        popup.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scrolling
+        // Mark as dismissed for this session
+        sessionStorage.setItem('helpPopupDismissed', 'true');
+    }
+}
+
+// Close help popup when clicking outside
+document.addEventListener('click', (e) => {
+    const helpPopup = document.getElementById('helpPopup');
+    if (e.target === helpPopup) {
+        closeHelpPopup();
+    }
+});
+
+// Close help popup with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const helpPopup = document.getElementById('helpPopup');
+        if (helpPopup && helpPopup.classList.contains('show')) {
+            closeHelpPopup();
+        }
+    }
+});
+
+// Mobile-specific improvements
+function handleMobileOptimizations() {
+    // Prevent zoom on double tap for iOS
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
+
+    // Improve touch scrolling
+    document.body.style.webkitOverflowScrolling = 'touch';
+    
+    // Handle orientation change
+    window.addEventListener('orientationchange', function() {
+        setTimeout(function() {
+            // Recalculate viewport height for mobile browsers
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }, 100);
+    });
+
+    // Set initial viewport height
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const navMenu = document.querySelector('.nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    
+    if (navMenu && navToggle && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+        const bars = navToggle.querySelectorAll('.bar');
+        bars.forEach(bar => {
+            bar.style.transform = 'none';
+            bar.style.opacity = '1';
+        });
+    }
+});
+
+// Smooth scroll for mobile
+function smoothScrollTo(target) {
+    const element = document.querySelector(target);
+    if (element) {
+        const offsetTop = element.offsetTop - 80; // Account for fixed navbar
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Initialize mobile optimizations
+document.addEventListener('DOMContentLoaded', () => {
+    showDeadlinePopup();
+    handleMobileOptimizations();
 });

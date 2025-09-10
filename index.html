@@ -10,7 +10,11 @@
     })(window,document,'script','dataLayer','GTM-WFZVBK24');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Hack The AI - Inter University Hackathon</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,6 +28,94 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFZVBK24"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Deadline Extension Popup -->
+    <div id="deadlinePopup" class="deadline-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-icon">
+                    <i class="fas fa-calendar-plus"></i>
+                </div>
+                <h3>Deadline Extended!</h3>
+                <button class="popup-close" onclick="closeDeadlinePopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-body">
+                <p class="popup-message">
+                    Great news! The registration deadline has been extended to 
+                    <strong>September 13th, 2025 at 8:00 PM</strong>
+                </p>
+                <p class="popup-submessage">
+                    You now have more time to register for Hack The AI - Inter University Hackathon!
+                </p>
+                <div class="popup-actions">
+                    <a href="https://forms.gle/QvzXYQ3hdAHPkkWVA" target="_blank" class="popup-register-btn">
+                        Register Now
+                    </a>
+                    <a href="https://discord.com/channels/1053043587278983168/1410043819457777726" target="_blank" class="popup-discord-btn">
+                        <i class="fab fa-discord"></i>
+                        Join Discord
+                    </a>
+                    <button class="popup-dismiss" onclick="closeDeadlinePopup()">
+                        Dismiss
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Registration Help Popup -->
+    <div id="helpPopup" class="help-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h3>Need Help?</h3>
+                <button class="popup-close" onclick="closeHelpPopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-body">
+                <p class="popup-message">
+                    Haven't received your confirmation email or having trouble joining the Google Classroom?
+                </p>
+                <p class="popup-submessage">
+                    Don't worry! Our team is here to help you get registered successfully.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:gucc@green.edu.bd" class="contact-link">gucc@green.edu.bd</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+8801569104401" class="contact-link">+880 1569 104401</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-actions">
+                    <a href="mailto:gucc@green.edu.bd" class="popup-contact-btn">
+                        <i class="fas fa-envelope"></i>
+                        Send Email
+                    </a>
+                    <a href="tel:+8801569104401" class="popup-call-btn">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </a>
+                    <button class="popup-dismiss" onclick="closeHelpPopup()">
+                        Got It
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -83,17 +175,24 @@
                         <span class="stat-label">Prize Pool</span>
                     </div>
                 </div>
-                <a href="https://forms.gle/QvzXYQ3hdAHPkkWVA" target="_blank" class="cta-button">
-                    <span class="button-text">Register Now</span>
-                    <div class="button-glow"></div>
-                </a>
+                <div class="hero-buttons">
+                    <a href="https://forms.gle/QvzXYQ3hdAHPkkWVA" target="_blank" class="cta-button">
+                        <span class="button-text">Register Now</span>
+                        <div class="button-glow"></div>
+                    </a>
+                    <a href="https://discord.com/channels/1053043587278983168/1410043819457777726" target="_blank" class="discord-button">
+                        <i class="fab fa-discord"></i>
+                        <span class="button-text">Join Discord</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <a href="#registration" class="scroll-indicator" aria-label="Scroll to About section">
             <div class="scroll-arrow"></div>
         </a>
     </section>
 
+    
     <!-- Registration Details Section -->
     <section id="registration" class="registration">
         <div class="container">
@@ -315,10 +414,10 @@
                 <div class="event-card">
                     <div class="event-card-header">
                         <div class="event-icon"><i class="far fa-calendar"></i></div>
-                        <div class="event-date-text">10th September 2025</div>
+                        <div class="event-date-text">13th September 2025</div>
                     </div>
                     <h3 class="event-title">Registration Deadline</h3>
-                    <p class="event-desc">Last day to register for the hackathon</p>
+                    <p class="event-desc">Last day to register for the hackathon (Extended to 8:00 PM)</p>
                 </div>
                 <div class="event-card">
                     <div class="event-card-header">
@@ -379,6 +478,128 @@
                         <p>Organizer</p>
                     </div>
                     
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Support Section -->
+    <section id="contact-support" class="contact-support">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-header">
+                    <div class="contact-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Need Registration Help?</h3>
+                    <p>Having trouble with registration or Google Classroom access?</p>
+                </div>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="method-info">
+                            <h4>Email Support</h4>
+                            <a href="mailto:gucc@green.edu.bd" class="contact-link">gucc@green.edu.bd</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="method-info">
+                            <h4>Phone Support</h4>
+                            <a href="tel:+8801569104401" class="contact-link">+880 1569 104401</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-note">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Our team is available to help you with registration issues and Google Classroom access.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Sessions Section -->
+    <section id="training" class="training">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Training & Q&A Sessions</h2>
+                <div class="title-underline"></div>
+                <p class="training-subtitle">Join our SmythOS training sessions to prepare for the hackathon</p>
+            </div>
+            <div class="training-cards">
+                <div class="training-card">
+                    <div class="training-header">
+                        <div class="training-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Training Session</h3>
+                        <div class="training-date">12th September 2025</div>
+                    </div>
+                    <div class="training-content">
+                        <div class="training-time">
+                            <i class="fas fa-clock"></i>
+                            <span>09:00 PM (BST)</span>
+                        </div>
+                        <div class="training-location">
+                            <i class="fas fa-video"></i>
+                            <span>Zoom Meeting</span>
+                        </div>
+                        <div class="training-description">
+                            <p>Gain training and guidance for the hackathon. Get answers to all your event-related queries and prepare effectively for the upcoming challenges.</p>
+                        </div>
+                        <div class="training-agenda">
+                            <h4>Agenda:</h4>
+                            <ul>
+                                <li>Welcome & Event Guidelines</li>
+                                <li>Training / Knowledge Sharing</li>
+                                <li>Q&A with Organizers</li>
+                                <li>Closing Remarks</li>
+                            </ul>
+                        </div>
+                        <a href="https://bdren.zoom.us/j/98750810531?pwd=7FY7Ift56jlEat4j107NgvGVSUESAP.1" target="_blank" class="training-join-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            Join Session
+                        </a>
+                    </div>
+                </div>
+
+                <div class="training-card">
+                    <div class="training-header">
+                        <div class="training-icon">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                        <h3>Training Session</h3>
+                        <div class="training-date">13th September 2025</div>
+                    </div>
+                    <div class="training-content">
+                        <div class="training-time">
+                            <i class="fas fa-clock"></i>
+                            <span>09:00 PM (BST)</span>
+                        </div>
+                        <div class="training-location">
+                            <i class="fas fa-video"></i>
+                            <span>Zoom Meeting</span>
+                        </div>
+                        <div class="training-description">
+                            <p>Same session repeated for those who missed the first day. Join us for training and guidance to prepare effectively for the hackathon.</p>
+                        </div>
+                        <div class="training-agenda">
+                            <h4>Agenda:</h4>
+                            <ul>
+                                <li>Welcome & Event Guidelines</li>
+                                <li>Training / Knowledge Sharing</li>
+                                <li>Q&A with Organizers</li>
+                                <li>Closing Remarks</li>
+                            </ul>
+                        </div>
+                        <a href="https://bdren.zoom.us/j/98750810531?pwd=7FY7Ift56jlEat4j107NgvGVSUESAP.1" target="_blank" class="training-join-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            Join Session
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -568,7 +789,7 @@
                             </div>
                         </div>
                         <div class="faq-answer">
-                            <p>Registration is simple! Click the "Register Now" button in the navigation or hero section, which will take you to our Google Forms registration page. Make sure to register before the deadline on September 10th, 2025.</p>
+                            <p>Registration is simple! Click the "Register Now" button in the navigation or hero section, which will take you to our Google Forms registration page. Make sure to register before the deadline on September 13th, 2025 at 8:00 PM.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -601,6 +822,7 @@
                         <li><a href="https://www.instagram.com/smyth_os/" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</span></a></li>
                         <li><a href="https://www.youtube.com/@Smyth_OS" target="_blank"><i class="fab fa-youtube"></i> <span>YouTube</span></a></li>
                         <li><a href="https://www.linkedin.com/company/smythos/" target="_blank"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a></li>
+                        <li><a href="https://discord.com/channels/1053043587278983168/1410043819457777726" target="_blank"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
