@@ -29,41 +29,6 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
-    <!-- Deadline Extension Popup -->
-    <div id="deadlinePopup" class="deadline-popup">
-        <div class="popup-content">
-            <div class="popup-header">
-                <div class="popup-icon">
-                    <i class="fas fa-calendar-plus"></i>
-                </div>
-                <h3>Deadline Extended!</h3>
-                <button class="popup-close" onclick="closeDeadlinePopup()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="popup-body">
-                <p class="popup-message">
-                    Great news! The registration deadline has been extended to 
-                    <strong>September 13th, 2025 at 8:00 PM</strong>
-                </p>
-                <p class="popup-submessage">
-                    You now have more time to register for Hack The AI - Inter University Hackathon!
-                </p>
-                <div class="popup-actions">
-                    <a href="https://forms.gle/QvzXYQ3hdAHPkkWVA" target="_blank" class="popup-register-btn">
-                        Register Now
-                    </a>
-                    <a href="https://discord.com/channels/1053043587278983168/1410043819457777726" target="_blank" class="popup-discord-btn">
-                        <i class="fab fa-discord"></i>
-                        Join Discord
-                    </a>
-                    <button class="popup-dismiss" onclick="closeDeadlinePopup()">
-                        Dismiss
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <!-- Registration Help Popup -->
     <div id="helpPopup" class="help-popup">
@@ -116,6 +81,38 @@
             </div>
         </div>
     </div>
+    
+    <!-- Registration Closed Popup -->
+    <div id="registrationClosedPopup" class="registration-closed-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h3>Registration Closed</h3>
+                <button class="popup-close" onclick="closeRegistrationClosedPopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-body">
+                <div class="registration-closed-notice">
+                    <h3>Registration Closed</h3>
+                    <p>240 teams have been registered for the preliminary round!</p>
+                    <p>Join our Discord to get updates directly from SmythOS</p>
+                </div>
+                <div class="popup-actions">
+                    <a href="https://discord.gg/upd2GNbg" target="_blank" class="popup-discord-btn">
+                        <i class="fab fa-discord"></i>
+                        Join Discord
+                    </a>
+                    <button class="popup-dismiss" onclick="closeRegistrationClosedPopup()">
+                        Got It
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -127,10 +124,11 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#prizes" class="nav-link">Prizes</a>
                 <a href="#timeline" class="nav-link">Timeline</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#videos" class="nav-link">Videos</a>
                 <a href="#categories" class="nav-link">Categories</a>
                 <a href="#organizers" class="nav-link">Organizers</a>
                 <a href="#faq" class="nav-link">FAQ</a>
-                <a href="https://forms.gle/QvzXYQ3hdAHPkkWVA" target="_blank" class="nav-register-btn">Register Now</a>
             </div>
             <div class="nav-toggle">
                 <span class="bar"></span>
@@ -163,8 +161,8 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Teams</span>
+                        <span class="stat-number">240</span>
+                        <span class="stat-label">Teams Registered</span>
                     </div>
                     <!-- <div class="stat-item">
                         <span class="stat-number">3</span>
@@ -176,11 +174,12 @@
                     </div>
                 </div>
                 <div class="hero-buttons">
-                    <a href="https://forms.gle/QvzXYQ3hdAHPkkWVA" target="_blank" class="cta-button">
-                        <span class="button-text">Register Now</span>
-                        <div class="button-glow"></div>
-                    </a>
-                    <a href="https://discord.com/channels/1053043587278983168/1410043819457777726" target="_blank" class="discord-button">
+                    <!-- <div class="registration-closed-notice">
+                        <h3>Registration Closed</h3>
+                        <p>240 teams have been registered for the preliminary round!</p>
+                        <p>Join our Discord to get updates directly from SmythOS</p>
+                    </div> -->
+                    <a href="https://discord.gg/upd2GNbg" target="_blank" class="discord-button">
                         <i class="fab fa-discord"></i>
                         <span class="button-text">Join Discord</span>
                     </a>
@@ -197,9 +196,9 @@
     <section id="registration" class="registration">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Registration Details</h2>
+                <h2 class="section-title">Registration Status</h2>
                 <div class="title-underline"></div>
-                <p class="registration-subtitle">Ready to join the innovation? Here's everything you need to know about registration</p>
+                <p class="registration-subtitle">Registration is now closed! 240 teams have been successfully registered for the preliminary round</p>
             </div>
             <div class="registration-grid">
                 <div class="registration-card">
@@ -215,21 +214,21 @@
                         <div class="registration-icon"><i class="fas fa-user-group"></i></div>
                     </div>
                     <h3 class="registration-title">Team Size</h3>
-                    <div class="registration-amount">3</div>
+                    <div class="registration-amount">2-3</div>
                     <p class="registration-note">Participants per team</p>
                 </div>
                 <div class="registration-card">
                     <div class="registration-card-header">
-                        <div class="registration-icon success"><i class="fas fa-file-lines"></i></div>
+                        <div class="registration-icon success"><i class="fas fa-check-circle"></i></div>
                     </div>
-                    <h3 class="registration-title">Apply Now</h3>
-                    <p class="registration-note">Submit your application through our Google Form</p>
-                    <a href="https://forms.gle/QvzXYQ3hdAHPkkWVA" target="_blank" class="apply-button">Apply Now</a>
+                    <h3 class="registration-title">Registration Closed</h3>
+                    <p class="registration-note">240 teams have been registered for the preliminary round</p>
+                    <p class="registration-note">Join Discord for updates from SmythOS</p>
                 </div>
             </div>
             <div class="registration-warning">
-                <div class="warning-icon"><i class="fas fa-triangle-exclamation"></i></div>
-                <p><strong>Important Note:</strong> Registration fee is only required after successful selection from the preliminary round. All preliminary round participants can apply for free.</p>
+                <div class="warning-icon"><i class="fas fa-info-circle"></i></div>
+                <p><strong>Registration Closed:</strong> 240 teams have been registered for the preliminary round. Join our Discord server to get updates directly from SmythOS about the event progress and future opportunities.</p>
             </div>
         </div>
     </section>
@@ -413,35 +412,66 @@
             <div class="event-cards">
                 <div class="event-card">
                     <div class="event-card-header">
-                        <div class="event-icon"><i class="far fa-calendar"></i></div>
-                        <div class="event-date-text">13th September 2025</div>
+                        <div class="event-icon"><i class="far fa-clock"></i></div>
+                        <div class="event-date-text">14th September, 7:00 PM to 9:00 PM</div>
                     </div>
-                    <h3 class="event-title">Registration Deadline</h3>
-                    <p class="event-desc">Last day to register for the hackathon (Extended to 8:00 PM)</p>
+                    <h3 class="event-title">Mock Preliminary</h3>
+                    <p class="event-desc">Practice round for participants</p>
                 </div>
                 <div class="event-card">
                     <div class="event-card-header">
                         <div class="event-icon"><i class="far fa-clock"></i></div>
-                        <div class="event-date-text">14th – 15th September 2025</div>
+                        <div class="event-date-text">15th September, 6:00 PM to 10:00 PM</div>
                     </div>
-                    <h3 class="event-title">Preliminary Round</h3>
-                    <p class="event-desc">Initial screening and team selection</p>
+                    <h3 class="event-title">Final Preliminary</h3>
+                    <p class="event-desc">Main preliminary round for team selection</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-card-header">
+                        <div class="event-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="event-date-text">16th – 17th September, 2025</div>
+                    </div>
+                    <h3 class="event-title">Idea Submission and Final Registration</h3>
+                    <p class="event-desc">Submit your project ideas and complete final registration</p>
                 </div>
                 <div class="event-card">
                     <div class="event-card-header">
                         <div class="event-icon"><i class="fas fa-video"></i></div>
-                        <div class="event-date-text">22nd – 24th September 2025</div>
+                        <div class="event-date-text">22nd – 24th September (Online)</div>
                     </div>
                     <h3 class="event-title">Final Round (Online)</h3>
-                    <p class="event-desc">Online hackathon phase</p>
+                    <p class="event-desc">Selected teams will begin developing their main project</p>
                 </div>
                 <div class="event-card">
                     <div class="event-card-header">
                         <div class="event-icon"><i class="fas fa-location-dot"></i></div>
-                        <div class="event-date-text">25th September 2025</div>
+                        <div class="event-date-text">25th September (Onsite)</div>
                     </div>
                     <h3 class="event-title">Final Round (Onsite)</h3>
-                    <p class="event-desc">At Green University of Bangladesh</p>
+                    <p class="event-desc">At Green University of Bangladesh - Teams will continue and finalize the same project and then present it to the judges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Section -->
+    <section id="theme" class="theme">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Final Round Theme</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="theme-content">
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Open Innovation</h3>
+                    <p>The Final Round will be an open idea, giving teams the freedom to innovate in any domain, as long as some of the AI related features are built with SmythOS Flow Builder.</p>
+                    <div class="theme-highlight">
+                        <i class="fas fa-robot"></i>
+                        <span>AI features must be built using SmythOS Flow Builder</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -490,8 +520,8 @@
                     <div class="contact-icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>Need Registration Help?</h3>
-                    <p>Having trouble with registration or Google Classroom access?</p>
+                    <h3>Need Help or Updates?</h3>
+                    <p>Join our Discord for updates directly from SmythOS or contact us for any questions</p>
                 </div>
                 <div class="contact-methods">
                     <div class="contact-method">
@@ -515,7 +545,7 @@
                 </div>
                 <div class="contact-note">
                     <i class="fas fa-info-circle"></i>
-                    <span>Our team is available to help you with registration issues and Google Classroom access.</span>
+                    <span>Join our Discord server to get updates directly from SmythOS about the event progress and future opportunities.</span>
                 </div>
             </div>
         </div>
@@ -525,17 +555,60 @@
     <section id="training" class="training">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Training & Q&A Sessions</h2>
+                <h2 class="section-title">Training & Workshop Sessions</h2>
                 <div class="title-underline"></div>
-                <p class="training-subtitle">Join our SmythOS training sessions to prepare for the hackathon</p>
+                <p class="training-subtitle">Comprehensive training sessions to prepare you for the hackathon</p>
             </div>
             <div class="training-cards">
                 <div class="training-card">
+                    <div class="training-image">
+                        <img src="Assets/Workshop on Hackathon 101.png" alt="Hackathon 101 Workshop" class="training-img">
+                    </div>
                     <div class="training-header">
                         <div class="training-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                            <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3>Training Session</h3>
+                        <h3>Hackathon 101: What, Why & How</h3>
+                        <div class="training-date">11th September 2025</div>
+                    </div>
+                    <div class="training-content">
+                        <div class="training-time">
+                            <i class="fas fa-clock"></i>
+                            <span>09:00 PM (BST)</span>
+                        </div>
+                        <div class="training-location">
+                            <i class="fas fa-video"></i>
+                            <span>Zoom Meeting</span>
+                        </div>
+                        <div class="training-description">
+                            <p>Learn the fundamentals of hackathons - what they are, why they matter, and how to succeed. Perfect for beginners and those looking to understand the hackathon process.</p>
+                        </div>
+                        <div class="training-agenda">
+                            <h4>Agenda:</h4>
+                            <ul>
+                                <li>Introduction to Hackathons</li>
+                                <li>Team Formation Strategies</li>
+                                <li>Idea Development Process</li>
+                                <li>Time Management Tips</li>
+                                <li>Q&A Session</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.facebook.com/share/v/17A9mXuwX5/" target="_blank" class="training-join-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            Session Recording
+                        </a>
+                    </div>
+                </div>
+
+                <div class="training-card">
+                    <div class="training-image">
+                        <img src="Assets/Training Session Day 1.png" alt="SmythOS Training Day 1" class="training-img">
+                    </div>
+                    <div class="training-header">
+                        <div class="training-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Training Session with SmythOS - Day 01</h3>
                         <div class="training-date">12th September 2025</div>
                     </div>
                     <div class="training-content">
@@ -548,30 +621,34 @@
                             <span>Zoom Meeting</span>
                         </div>
                         <div class="training-description">
-                            <p>Gain training and guidance for the hackathon. Get answers to all your event-related queries and prepare effectively for the upcoming challenges.</p>
+                            <p>Deep dive into SmythOS platform and AI agent development. Learn how to build powerful AI solutions using SmythOS Flow Builder and other tools.</p>
                         </div>
                         <div class="training-agenda">
                             <h4>Agenda:</h4>
                             <ul>
-                                <li>Welcome & Event Guidelines</li>
-                                <li>Training / Knowledge Sharing</li>
-                                <li>Q&A with Organizers</li>
-                                <li>Closing Remarks</li>
+                                <li>SmythOS Platform Overview</li>
+                                <li>AI Agent Development Basics</li>
+                                <li>Flow Builder Tutorial</li>
+                                <li>Hands-on Practice Session</li>
+                                <li>Q&A with SmythOS Team</li>
                             </ul>
                         </div>
-                        <a href="https://bdren.zoom.us/j/98750810531?pwd=7FY7Ift56jlEat4j107NgvGVSUESAP.1" target="_blank" class="training-join-btn">
+                        <a href="https://www.facebook.com/share/v/1BBGEQD2x3/" target="_blank" class="training-join-btn">
                             <i class="fas fa-external-link-alt"></i>
-                            Join Session
+                            Session Recording
                         </a>
                     </div>
                 </div>
 
                 <div class="training-card">
+                    <div class="training-image">
+                        <img src="Assets/Training Session with GUCC Day 2.png" alt="GUCC Training Day 2" class="training-img">
+                    </div>
                     <div class="training-header">
                         <div class="training-icon">
-                            <i class="fas fa-redo"></i>
+                            <i class="fas fa-users"></i>
                         </div>
-                        <h3>Training Session</h3>
+                        <h3>Training Session with GUCC - Day 02</h3>
                         <div class="training-date">13th September 2025</div>
                     </div>
                     <div class="training-content">
@@ -584,22 +661,130 @@
                             <span>Zoom Meeting</span>
                         </div>
                         <div class="training-description">
-                            <p>Same session repeated for those who missed the first day. Join us for training and guidance to prepare effectively for the hackathon.</p>
+                            <p>Final preparation session with GUCC organizers. Get last-minute tips, event guidelines, and answers to all your questions before the hackathon begins.</p>
                         </div>
                         <div class="training-agenda">
                             <h4>Agenda:</h4>
                             <ul>
-                                <li>Welcome & Event Guidelines</li>
-                                <li>Training / Knowledge Sharing</li>
-                                <li>Q&A with Organizers</li>
-                                <li>Closing Remarks</li>
+                                <li>Event Guidelines & Rules</li>
+                                <li>Submission Process</li>
+                                <li>Judging Criteria</li>
+                                <li>Team Coordination Tips</li>
+                                <li>Final Q&A Session</li>
                             </ul>
                         </div>
-                        <a href="https://bdren.zoom.us/j/98750810531?pwd=7FY7Ift56jlEat4j107NgvGVSUESAP.1" target="_blank" class="training-join-btn">
+                        <a href="https://www.facebook.com/share/v/1FTB3pAyGN/" target="_blank" class="training-join-btn">
                             <i class="fas fa-external-link-alt"></i>
-                            Join Session
+                            Session Recording
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">University Visit Gallery</h2>
+                <div class="title-underline"></div>
+                <p class="gallery-subtitle">Capturing moments from our university visits and hackathon preparation</p>
+            </div>
+            <div class="gallery-container">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="Assets/University Visit/1.png" alt="University Visit 1" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/2.png" alt="University Visit 2" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/3.png" alt="University Visit 3" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/4.png" alt="University Visit 4" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/5.png" alt="University Visit 5" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/6.png" alt="University Visit 6" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/7.png" alt="University Visit 7" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/8.png" alt="University Visit 8" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/9.png" alt="University Visit 9" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/10.png" alt="University Visit 10" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/11.png" alt="University Visit 11" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/12.png" alt="University Visit 12" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/13.png" alt="University Visit 13" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/14.png" alt="University Visit 14" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/15.png" alt="University Visit 15" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/16.png" alt="University Visit 16" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/17.png" alt="University Visit 17" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/18.png" alt="University Visit 18" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/19.png" alt="University Visit 19" class="gallery-image">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/University Visit/20.png" alt="University Visit 20" class="gallery-image">
+                    </div>
+                    
+                    <!-- Navigation arrows -->
+                    <button class="prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Dots indicator -->
+                <div class="dots-container">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+                    <span class="dot" onclick="currentSlide(10)"></span>
+                    <span class="dot" onclick="currentSlide(11)"></span>
+                    <span class="dot" onclick="currentSlide(12)"></span>
+                    <span class="dot" onclick="currentSlide(13)"></span>
+                    <span class="dot" onclick="currentSlide(14)"></span>
+                    <span class="dot" onclick="currentSlide(15)"></span>
+                    <span class="dot" onclick="currentSlide(16)"></span>
+                    <span class="dot" onclick="currentSlide(17)"></span>
+                    <span class="dot" onclick="currentSlide(18)"></span>
+                    <span class="dot" onclick="currentSlide(19)"></span>
+                    <span class="dot" onclick="currentSlide(20)"></span>
                 </div>
             </div>
         </div>
@@ -783,13 +968,13 @@
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>How do I register?</h3>
+                            <h3>Is registration still open?</h3>
                             <div class="faq-toggle">
                                 <i class="fas fa-plus"></i>
                             </div>
                         </div>
                         <div class="faq-answer">
-                            <p>Registration is simple! Click the "Register Now" button in the navigation or hero section, which will take you to our Google Forms registration page. Make sure to register before the deadline on September 13th, 2025 at 8:00 PM.</p>
+                            <p>Registration is now closed! We have successfully registered 240 teams for the preliminary round. Join our Discord server to get updates directly from SmythOS about the event and future opportunities.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -822,7 +1007,7 @@
                         <li><a href="https://www.instagram.com/smyth_os/" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</span></a></li>
                         <li><a href="https://www.youtube.com/@Smyth_OS" target="_blank"><i class="fab fa-youtube"></i> <span>YouTube</span></a></li>
                         <li><a href="https://www.linkedin.com/company/smythos/" target="_blank"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a></li>
-                        <li><a href="https://discord.com/channels/1053043587278983168/1410043819457777726" target="_blank"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
+                        <li><a href="https://discord.gg/upd2GNbg" target="_blank"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

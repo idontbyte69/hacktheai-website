@@ -221,57 +221,34 @@ document.addEventListener('DOMContentLoaded', () => {
     createScrollProgress();
 });
 
-// Add countdown timer for registration deadline
-function createCountdown() {
-    const deadline = new Date('September 13, 2025 20:00:00').getTime();
+// Registration status indicator (since registration is closed)
+function createRegistrationStatus() {
+    const statusElement = document.createElement('div');
+    statusElement.style.position = 'fixed';
+    statusElement.style.top = '80px';
+    statusElement.style.right = '20px';
+    statusElement.style.background = 'rgba(255, 0, 0, 0.1)';
+    statusElement.style.border = '1px solid rgba(255, 0, 0, 0.3)';
+    statusElement.style.borderRadius = '10px';
+    statusElement.style.padding = '15px';
+    statusElement.style.color = '#ff4444';
+    statusElement.style.fontSize = '14px';
+    statusElement.style.fontWeight = '600';
+    statusElement.style.zIndex = '1000';
+    statusElement.style.backdropFilter = 'blur(10px)';
+    statusElement.style.textAlign = 'center';
     
-    const countdownElement = document.createElement('div');
-    countdownElement.style.position = 'fixed';
-    countdownElement.style.top = '80px';
-    countdownElement.style.right = '20px';
-    countdownElement.style.background = 'rgba(0, 255, 255, 0.1)';
-    countdownElement.style.border = '1px solid rgba(0, 255, 255, 0.3)';
-    countdownElement.style.borderRadius = '10px';
-    countdownElement.style.padding = '15px';
-    countdownElement.style.color = '#00ffff';
-    countdownElement.style.fontSize = '14px';
-    countdownElement.style.fontWeight = '600';
-    countdownElement.style.zIndex = '1000';
-    countdownElement.style.backdropFilter = 'blur(10px)';
+    statusElement.innerHTML = `
+        <div style="font-size: 12px; margin-bottom: 5px;">Registration Status</div>
+        <div style="font-size: 16px;">240 Teams Registered</div>
+    `;
     
-    document.body.appendChild(countdownElement);
-    
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = deadline - now;
-        
-        if (distance > 0) {
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            
-            countdownElement.innerHTML = `
-                <div style="text-align: center;">
-                    <div style="font-size: 12px; margin-bottom: 5px;">Registration Deadline</div>
-                    <div style="font-size: 16px;">${days}d ${hours}h ${minutes}m</div>
-                </div>
-            `;
-        } else {
-            countdownElement.innerHTML = `
-                <div style="text-align: center;">
-                    <div style="font-size: 12px;">Registration Closed</div>
-                </div>
-            `;
-        }
-    }
-    
-    updateCountdown();
-    setInterval(updateCountdown, 60000); // Update every minute
+    document.body.appendChild(statusElement);
 }
 
-// Initialize countdown
+// Initialize registration status
 document.addEventListener('DOMContentLoaded', () => {
-    createCountdown();
+    createRegistrationStatus();
 });
 
 // Add loading animation
@@ -309,12 +286,12 @@ document.addEventListener('DOMContentLoaded', () => {
     createCursorTrail();
 });
 
-// Deadline Extension Popup Functionality
-function showDeadlinePopup() {
-    const popup = document.getElementById('deadlinePopup');
+// Registration Closed Popup Functionality
+function showRegistrationClosedPopup() {
+    const popup = document.getElementById('registrationClosedPopup');
     if (popup) {
         // Check if popup was already dismissed in this session
-        const dismissed = sessionStorage.getItem('deadlinePopupDismissed');
+        const dismissed = sessionStorage.getItem('registrationClosedPopupDismissed');
         if (!dismissed) {
             setTimeout(() => {
                 popup.classList.add('show');
@@ -324,33 +301,31 @@ function showDeadlinePopup() {
     }
 }
 
-function closeDeadlinePopup() {
-    const popup = document.getElementById('deadlinePopup');
+function closeRegistrationClosedPopup() {
+    const popup = document.getElementById('registrationClosedPopup');
     if (popup) {
         popup.classList.remove('show');
         document.body.style.overflow = ''; // Restore scrolling
         // Mark as dismissed for this session
-        sessionStorage.setItem('deadlinePopupDismissed', 'true');
-        
-        // Show help popup after a short delay
-        setTimeout(() => {
-            showHelpPopup();
-        }, 500);
+        sessionStorage.setItem('registrationClosedPopupDismissed', 'true');
     }
 }
 
-// Close popup when clicking outside
+// Close registration closed popup when clicking outside
 document.addEventListener('click', (e) => {
-    const popup = document.getElementById('deadlinePopup');
+    const popup = document.getElementById('registrationClosedPopup');
     if (e.target === popup) {
-        closeDeadlinePopup();
+        closeRegistrationClosedPopup();
     }
 });
 
-// Close popup with Escape key
+// Close registration closed popup with Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        closeDeadlinePopup();
+        const popup = document.getElementById('registrationClosedPopup');
+        if (popup && popup.classList.contains('show')) {
+            closeRegistrationClosedPopup();
+        }
     }
 });
 
@@ -453,8 +428,67 @@ function smoothScrollTo(target) {
     }
 }
 
-// Initialize mobile optimizations
+// Gallery Slideshow Functionality
+let slideIndex = 1;
+let slideInterval;
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
+}
+
+function changeSlide(n) {
+    clearInterval(slideInterval);
+    slideIndex += n;
+    showSlides(slideIndex);
+    startAutoSlide();
+}
+
+function currentSlide(n) {
+    clearInterval(slideInterval);
+    slideIndex = n;
+    showSlides(slideIndex);
+    startAutoSlide();
+}
+
+function startAutoSlide() {
+    slideInterval = setInterval(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+    }, 4000); // Change slide every 4 seconds
+}
+
+function stopAutoSlide() {
+    clearInterval(slideInterval);
+}
+
+// Pause slideshow on hover
 document.addEventListener('DOMContentLoaded', () => {
-    showDeadlinePopup();
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    if (slideshowContainer) {
+        slideshowContainer.addEventListener('mouseenter', stopAutoSlide);
+        slideshowContainer.addEventListener('mouseleave', startAutoSlide);
+    }
+});
+
+// Initialize mobile optimizations and popups
+document.addEventListener('DOMContentLoaded', () => {
+    showRegistrationClosedPopup();
     handleMobileOptimizations();
+    showSlides(slideIndex);
+    startAutoSlide();
 });
