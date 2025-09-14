@@ -240,7 +240,7 @@ function createRegistrationStatus() {
     
     statusElement.innerHTML = `
         <div style="font-size: 12px; margin-bottom: 5px;">Registration Status</div>
-        <div style="font-size: 16px;">240 Teams Registered</div>
+        <div style="font-size: 16px;">242 Teams Registered</div>
     `;
     
     document.body.appendChild(statusElement);

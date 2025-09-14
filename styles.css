@@ -212,31 +212,31 @@ body {
 .hero-content {
     text-align: center;
     z-index: 1;
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 0 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 100px);
 }
 
 .hero-title {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .hero-logo {
-    max-width: 1200px;
+    max-width: 900px;
     width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     filter: drop-shadow(0 0 40px rgba(0, 255, 255, 0.5));
     animation: logo-glow 3s ease-in-out infinite;
     transform: scale(1.05);
@@ -244,12 +244,12 @@ body {
 
 .title-sub {
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
     animation: subtitle-glow 4s ease-in-out infinite;
     white-space: nowrap;
@@ -272,13 +272,13 @@ body {
 }
 
 .hero-info {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .hero-info p {
@@ -297,8 +297,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -543,23 +543,23 @@ body {
 
 /* Section Styles */
 section {
-    padding: 100px 0;
+    padding: 60px 0;
     position: relative;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .section-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
     background: linear-gradient(45deg, #00ffff, #ff00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
@@ -575,7 +575,7 @@ section {
 /* Contact Support Section */
 .contact-support {
     background: linear-gradient(135deg, rgba(255, 0, 255, 0.05) 0%, rgba(0, 255, 0, 0.05) 100%);
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 .contact-card {
@@ -726,28 +726,28 @@ section {
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
     justify-items: center;
 }
 
 .about-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #cccccc;
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
 }
 
 .about-features {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .feature-card {
     background: rgba(0, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -782,14 +782,14 @@ section {
 
 .prizes-content {
     display: grid;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .prize-categories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
     justify-items: center;
     align-items: stretch;
 }
@@ -798,7 +798,7 @@ section {
     background: rgba(0, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 2rem;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -990,13 +990,13 @@ section {
     background: rgba(0, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 3rem;
-    margin-top: 2rem;
+    padding: 2rem;
+    margin-top: 1.5rem;
 }
 
 .benefits-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .benefits-icon {
@@ -1023,7 +1023,7 @@ section {
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     justify-items: center;
     align-items: stretch;
 }
@@ -1032,7 +1032,7 @@ section {
     background: rgba(0, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
@@ -1196,7 +1196,7 @@ section {
 .event-cards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: stretch;
 }
 
@@ -1466,10 +1466,20 @@ section {
 .organizers-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     justify-items: center;
     align-items: stretch;
     max-width: 1500px;
+    margin: 0 auto;
+}
+
+.organizers-grid:first-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.organizers-grid:last-of-type {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -1477,14 +1487,14 @@ section {
     background: rgba(0, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     width: 100%;
     max-width: 400px;
-    min-height: 400px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1586,7 +1596,7 @@ section {
 .training-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: stretch;
 }
 
@@ -1855,7 +1865,7 @@ section {
 }
 
 .slide:hover .gallery-image {
-    transform: scale(2.05);
+    transform: scale(1.05);
 }
 
 .prev, .next {
@@ -3490,7 +3500,7 @@ section {
     }
     
     .section-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .hero-logo {
@@ -3587,7 +3597,7 @@ section {
     }
 
     .hero {
-        padding: 60px 0 30px;
+        padding: 25px 0 15px;
     }
 
     .hero-info p {
@@ -3846,7 +3856,7 @@ section {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .prize-categories {
@@ -3914,7 +3924,7 @@ section {
     }
 
     .hero {
-        padding: 50px 0 20px;
+        padding: 30px 0 15px;
     }
 
     .hero-content {
@@ -4513,6 +4523,7 @@ section {
         color: black !important;
         background: none !important;
         -webkit-background-clip: unset !important;
+        background-clip: unset !important;
         -webkit-text-fill-color: unset !important;
     }
     
