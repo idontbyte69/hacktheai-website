@@ -1,0 +1,125 @@
+Rank,team_name,university,team_leader,total_score,max_score,percentage,passed_problems,failed_problems,partial_problems,not_tested_problems,evaluated_zip_file
+1,BUBT_Dropouts,Bangladesh University of Business & Technology,Mehrab Hossain Ope,1251,1900,66,9,7,3,0,bubt_dropouts - Mehrab Hossain.zip
+2,DU_Prometheus,University of Dhaka,Fahim Shakil,1209,1900,64,8,7,4,0,du_prometheus - FAHIM SHAKIL (2).zip
+3,Bloom Filter,Shahjalal University of Science & Technology,MD Nasiat Hasan Fahim,1205,1900,63,9,7,3,0,bloom_filter - Mohammad Ridowan Sikder.zip
+4,OnlyG,Shahjalal University of Science & Technology,Nayem Ahmed,1203,1900,63,9,7,3,0,onlyg - Gazi Maksudur (1).zip
+5,Team Equation,Daffodil International University,Musabbir Hasan Ratul,1200,1900,63,9,7,3,0,team_equation - Hasan.zip
+6,SUST_Prompt_Storm,Shahjalal University of Science & Technology,Abhishek Dash,1199,1900,63,9,7,3,0,sust_prompt_storm - Badhon Ahmad.zip
+7,DeltaCoders,Shahjalal University of Science & Technology,Ajor Saha,1198,1900,63,9,7,3,0,deltacoders - Ajor Saha.zip
+8,Vibe Coders,University of Dhaka,Umme Kulsum Tumpa,1196,1900,63,9,7,3,0,vibe_coders - Tanvir Hasan Abir.zip
+9,Team StackWhiz,Shahjalal University of Science & Technology,Mustakim Billah,1195,1900,63,9,7,3,0,team_stackwhiz - Fuad Alamin.zip
+10,ONTORPONTHIK,Shahjalal University of Science & Technology,Unayes Ahmed Khan,1193,1900,63,9,7,3,0,ontorponthik - Unayes Ahmed Khan.zip
+11,MindSynth,Jahangirnagar University,Md. Yashrif Arifin Swoccho,1190,1900,63,9,7,3,0,mindsynth - Md. Yashrif Arifin Swoccho.zip
+12,Team X,Bangladesh University of Engineering and Technology,Saad Tahmid,1184,1900,62,8,7,4,0,team_x - Saad Tahmid.zip
+13,Akatsuki,Rajshahi University of Engineering & Technology,Anirban Sarkar,1182,1900,62,8,7,4,0,akatsuki - Anirban Sarkar.zip
+14,Not-a-Bug But-a-Feature,Green University of Bangladesh,Fardows Alam Kayes,1179,1900,62,8,7,4,0,not_a_bug_but_a_feature - batasha kayees.zip
+15,AI Titans,Daffodil International University,Md Wahid,1152,1900,61,8,7,4,0,ai_titans - MD Wahid.zip
+16,DU_Apricot,University of Dhaka,MD. Abu Bakar Siddique,1151,1900,61,7,7,5,0,du_apricot - Mehedi Hasan.zip
+17,Merge Conflict,Daffodil International University,Abir Kolin,1151,1900,61,8,7,4,0,merge_conflict - Abir Kolin.zip
+18,Team Kamikaze,BRAC University,Anit Paul,1146,1900,0,0,19,0,0,team_kamikaze - Animesh Bhattacharjee.zip
+19,Md. Tasnimur Rahman Shakir,Green University of Bangladesh,Md. Tasnimur Rahman Shakir,1143,1900,60,8,7,4,0,md__tasnimur_rahman_shakir - Md Niloy.zip
+20,DU_Caffeine,University of Dhaka,Abrar Eyasir,0,1900,0,0,19,0,0,du_caffeine - ashik (1).zip
+21,Syntax Squad GUB,Green University Of Bangladesh,Jawad Hossain Mahi,1133,1900,60,9,8,2,0,syntax_squad_gub - Jawad Hossain Mahi.zip
+22,Backpropagator,Chittagong University of Engineering and Technology,Shahad Abir Akash,1122,1900,59,8,8,3,0,backpropagator - SHAHAD ABIR 2104035 (1).zip
+23,Triangle,Jahangirnagar University,Md. Shaon Khan,1102,1900,58,7,7,5,0,triangle - 1999 Humayara Mustafa Kuasha.zip
+24,Team Non-Grata,Bangladesh University of Engineering and Technology,Arunavo Anirban Aikko,1093,1900,58,7,8,4,0,team_non_grata - safayat kabir.zip
+25,Bayes-ically Lost,Green University of Bangladesh,Al Arafat Uddin Koraishi,0,1900,0,0,19,0,0,bayes_ically_lost - Md. Samiul Islam (1).zip
+26,Niloy Kumar Mondal,Bangladesh University of Engineering and Technology,Niloy Kumar Mondal,1089,1900,57,7,8,4,0,niloy_kumar_mondal - Niloy Kumar Mondal.zip
+27,Team Bots,Bangladesh University of Engineering and Technology,Md. Tanzeem Mahmud,1077,1900,57,8,8,3,0,team_bots - Shashwoto Chowdhury.zip
+28,Horaizon,Green University of Bangladesh,Md. Mehadi Hasan,1076,1900,57,8,8,3,0,horaizon - Md. Mehadi Hasan GUB.zip
+29,Bok.AI,University of Rajshahi,Kazi Fardin Islam,1072,1900,56,7,8,4,0,bok_ai - Kazi Fardin Islam.zip
+30,LateCrew,Daffodil International University,Md. Mohimenul Islam,1061,1900,56,7,8,4,0,latecrew - MD. WHAHIDUL ISLAM.zip
+31,TeamTTR,Jagannath University,Tertho Ghosh,1018,1900,54,6,9,4,0,teamttr - Tertho Ghosh.zip
+32,DevOops,Bangladesh University of Engineering and Technology,Mafruha Islam Aishi,1012,1900,53,5,8,6,0,devoops - Fariha Ifrat.zip
+33,Define Coders,Shahjalal University of Science & Technology,Nafi Ullah Shafin,1010,1900,53,5,9,5,0,define_coders - Rahik NM.zip
+34,Iman,Shahjalal University of Science & Technology,Md Abdullah Al Mahadi Apurbo,1005,1900,53,5,9,5,0,iman - Minhajul Haque.zip
+35,Return_Din0s,Green University of Bangladesh,Sabbir Hossain Osmani,1003,1900,53,4,9,6,0,return_din0s - Sabbir Hossain.zip
+36,Packet Loss,Mawlana Bhashani Science and Technology University,Nur Mahmud Ul Alam Tasin,1001,1900,53,7,8,4,0,packet_loss - Taher Shekh.zip
+37,Threezy Peasy,Green University of Bangladesh,Md Shajahan Apurba,1001,1900,53,6,8,5,0,threezy_peasy - Md Shajahan Apurbo.zip
+38,team_Namespace,Rajshahi University of Engineering & Technology,Abir Chandra Das,977,1900,51,4,8,7,0,team_namespace - Shihab Sarar Rafid.zip
+39,Triple_A,Bangladesh University of Engineering and Technology,Md. Abrar Jahin,973,1900,51,6,10,3,0,triple_a - Abrar Jahin.zip
+40,BashBagan,Rajshahi University of Engineering & Technology,Nahid Hasan,967,1900,51,5,10,4,0,bashbagan - Nahid Hasan.zip
+41,JUST_DOMinators,Jashore University of Science and Technology,Tarin Prosad Ghosh,962,1900,51,4,9,6,0,just_dominators - Tarin Prosad Ghosh.zip
+42,Team Hackeons,Green University of Bangladesh,MD. Raiyan Ur Rahman Jiyon,961,1900,51,5,9,5,0,team_hackeons - Sabbir Ahmed.zip
+43,DU_RapidFire,University of Dhaka,Nafis shyan,956,1900,50,4,9,6,0,du_rapidfire - Mominul Islam Hemal.zip
+44,Byte Builders,American International University - Bangladesh,Suvo Saha,952,1900,50,6,8,5,0,Byte_Builders - Shuvo Saha.zip
+45,AIpocalypse,Green University of Bangladesh,Md Roman Nihal,950,1900,50,5,9,5,0,aipocalypse - Md. Roman Nihal.zip
+46,Team KSZ,Jahangirnagar University,Zunaid Ali,949,1900,50,5,10,4,0,team_ksz - Zunaid Ali.zip
+47,RuntimeTerrors,University of Dhaka,Shah Alam Abir,929,1900,49,4,10,5,0,runtimeterrors - Shahriar Hossen Fahim.zip
+48,Pegasus,BRAC University,ASHFAQ AHMAD SAAD,918,1900,48,4,9,6,0,pegasus - ASHFAQ AHMAD SAAD.zip
+49,Green-coders,Green University of Banhladesh,Md. Sabbir Hossain,914,1900,48,4,9,6,0,green_coders - Rakibul Alam GUB.zip
+50,Debugging Ducks,Green University of Bangladesh,Md. Mahmudol Hasan,913,1900,48,4,10,5,0,debugging_ducks - Md. Mahmudol Hasan GUB.zip
+51,Ginger,Rajshahi University of Engineering & Technology,Sajid Shahriar Islam,884,1900,47,5,10,4,0,ginger - Sajid Shahriar Islam.zip
+52,Part Time Coders,Shahjalal University of Science & Technology,Irfanul Huda,880,1900,46,3,10,6,0,part_time_coders - Irfanul Huda.zip
+53,Team_RAFSANTAK,Jashore University of Science and Technology,Sajid Hasan Takbir,877,1900,46,6,10,3,0,team_rafsantak - Takbir Hasan.zip
+54,Team Curse,University of Asia Pacific,Nazmul Yeakin Iqra,875,1900,46,4,11,4,0,team_curse - Yeakin Iqra.zip
+55,Backprop,Rajshahi University of Engineering & Technology,Md Habibur Rahman,867,1900,46,4,11,4,0,backprop - Md Habibur Rahman.zip
+56,AlgoTribe,University of Rajshahi,Fouzia Naim Khan,863,1900,45,4,9,6,0,algotribe - BENOZIR AHAMED HRIDOY (2).zip
+57,T1G,Islamic University of Technology,Taki Tajwaruzzaman Khan,534,1900,28,0,13,6,0,t1g - Taki Tajwaruzzaman Khan 210042146.zip
+58,A_Team_has_no_identity,Bangladesh University of Engineering and Technology,Tahmidul Islam Omi,836,1900,44,5,10,4,0,a_team_has_no_identity - Tahmidul Islam Omi.zip
+59,Javamin_Crew,Shahjalal University of Science & Technology,Abdullah Al Mahmud,825,1900,43,2,11,6,0,javamin_crew - Abdullah Al Mahmud.zip
+60,DUET_Cognitia,Dhaka University of Engineering & Technology,Yeasir arafat dipu,822,1900,43,4,10,5,0,duet_cognitia - Arafat Howlader.zip
+61,Kijani,Daffodil International University,Azmain Fieque,789,1900,42,4,12,3,0,kijani - Azmain Fieque.zip
+62,The Unknown Warriors,Green University of Bangladesh,Bakul Ahmed,779,1900,41,3,10,6,0,the_unknown_warriors - Bakul Ahmed.zip
+63,Arekta_Team,Bangladesh Army International University of Science and Technology,Md. Rashedin Khan Srejon,765,1900,40,3,11,5,0,Arekta_Team - Srejon Khan.zip
+64,NextGenThinkers,Shahjalal University of Science & Technology,Md Robiul Islam Robin,764,1900,40,3,13,3,0,nextgenthinkers - MD Meraj Mridha.zip
+65,Green_Thunder,Green University of Bangladesh,Jubaer Al Mamun,734,1900,39,4,13,2,0,green_thunder - Jubaer Al Mamun (1).zip
+66,LumenLeaf,North South University,Mahbub Ahmed Turza,729,1900,38,4,11,4,0,lumenleaf - Mahbub Ahmed Turza.zip
+67,Musafir,Jagannath University,Farzana Akter,724,1900,38,3,12,4,0,musafir - Eleas Sarker.zip
+68,Team_3Dots,Green University Of Bangladesh,Md Abu Sufian,719,1900,38,3,11,5,0,team_3dots - Abu Rahat Shaum.zip
+69,More Than Rocket Science,Green University of Bangladesh,MD FAHIM SARKER MRIDUL,710,1900,37,3,12,4,0,more_than_rocket_science - Samim Reza.zip
+70,Comrade Sidekick,BRAC University,Md Intekhabul Hafiz,698,1900,37,3,13,3,0,comrade_sidekick - Intekhab - Md Intekhabul Hafiz.zip
+71,404nOtFound,Bangladesh University of Professionals,Umme Hani Punam,676,1900,36,2,13,4,0,404notFound - Punam Papri.zip
+72,Tried_best,Shahjalal University of Science & Technology,Md Khaled bin,662,1900,35,1,13,5,0,Tried_best - Sahidur Rahman.zip
+73,JUST_Stellar_Wind,Jashore University of Science and Technology,Nazmus Sakib Sibly,631,1900,33,2,14,3,0,JUST_Stellar_Wind - Nazmus Sakib Sibly.zip
+74,Team_Target,Green University of Bangladesh,MD Emon Mia,624,1900,33,1,13,5,0,team_target - Ibrahim Rifat GUB.zip
+75,T1G,Islamic University of Technology,Taki Tajwaruzzaman Khan,534,1900,28,0,13,6,0,t1g - Taki Tajwaruzzaman Khan 210042146.zip
+76,TeamEggineer,Shahjalal University of Science & Technology,Md. Nasir Uddin,524,1900,28,1,13,5,0,teameggineer - Nasir Uddin.zip
+77,JnU_TrueNest,Jagannath University,Fahmida Sweety,497,1900,26,0,15,4,0,jnu_truenest - MdAbu Sayedislam.zip
+78,Team Systalo,Daffodil International University,Md Mobashir Hasan,493,1900,26,0,14,5,0,team_systalo - Md Mobashir Hasan.zip
+79,Spartans,Rajshahi University of Engineering & Technology,Eazdan Mostafa Rafin,477,1900,25,0,15,4,0,spartans - Eazdan Mostafa Rafin.zip
+80,New_Folder,Bangladesh Army International University of Science and Technology,Abdullah al moneem,460,1900,24,1,15,3,0,new_folder - Abdullah Al Moneem.zip
+81,CodePirates,Green University of Bangladesh,Rahat Hossain Himel,458,1900,24,0,16,3,0,codepirates - Rahat Hossain Himel.zip
+82,Rajshova,University of Information Technology and Sciences,S M Ashaduzzaman,405,1900,21,0,17,2,0,rajshova - Mahir Masud.zip
+83,Icarus,Khulna University of Engineering & Technology,Asif Mahmud,403,1900,21,0,17,2,0,icarus - Asif Mahmud.zip
+84,Epoch Warriors,University Of Dhaka,Md. Ferdous Mondol,384,1900,20,0,17,2,0,epoch_warriors - Ferdous mondol.zip
+85,Inesperado,Noakhali Science and Technology University,Ayesha Mahmud,342,1900,18,0,19,0,0,inesperado - Niloy Mutsuddy.zip
+86,Backbencher_JnU,Jagannath University,Md. Samiul Islam,333,1900,18,2,16,1,0,backbencher_jnu - Samiul Islam.zip
+87,HSTU_Vanguard,Hajee Mohammad Danesh Science and Technology University,Md. Farhan Quadery,324,1900,17,0,19,0,0,hstu_vanguard - Shahriar Alom.zip
+88,nyctophile,Begum Rokeya University,Sajedur Rahman,197,1900,10,0,19,0,0,nyctophile - Sajedur.zip
+89,Saracen,Rajshahi University of Engineering & Technology,Minhajul Islam Zahin,75,1900,4,0,19,0,0,Saracen - SIRAJUM MUNIR.zip
+90,404,Bangladesh University of Engineering and Technology,Tanzim Tousif,0,1900,0,0,19,0,0,404 - Tanzim Tousif.zip
+91,404_name_not_found,Shahjalal University of Science & Technology,Mossa. Manisa,0,1900,0,0,19,0,0,404_name_not_found - mossammat manisa.zip
+92,AI Avengers,Green University of Bangladesh,Suaeb Ahmed,0,1900,0,0,19,0,0,ai_avengers - Suaeb Ahmed.zip
+93,BRACU Mavericks,BRAC University,Asief Iqbal Dieyaz,0,1900,0,0,19,0,0,bracu_mavericks - ASIEF IQBAL DIEYAZ.zip
+94,Centurions,Bangladesh University of Engineering and Technology,Asef Kabir,0,1900,0,0,19,0,0,centurions - ASEF KABIR.zip
+95,CodeCrafters 3.0,Daffodil International University (DIU),Md Mehedi Hasan Nayeem,0,1900,0,0,19,0,0,codecrafters_3_0 - Md. Mehedi Hasan Nayeem.zip
+96,Coming_of_age,Shahjalal University of Science & Technology (SUST),Tasneem Ahamed Siyam,0,1900,0,0,19,0,0,coming_of_age - Ahamed Siyam (1).zip
+97,Cypher,University Of Rajshahi,Tashdikur Rahman Khan,0,1900,0,0,19,0,0,cypher - Tashdik Khan.zip
+98,DevLoop,Noakhali Science and Technology University,Md Mofasel Hossain,0,1900,0,0,19,0,0,devloop - MEHEDI HASAN.zip
+99,Ghost of Sparta,Green University of Bangladesh,Nasif Fuad,0,1900,0,0,19,0,0,ghost_of_sparta - Nasif Fuad.zip
+100,GreenU_Red_Wings,Green University of Bangladesh,Fahmida Akter Nupur,0,1900,0,0,19,0,0,greenu_red_wings - Md Habib.zip
+101,Hackathon Kori,BRAC University,Niaz Nafi Rahman,0,1900,0,0,19,0,0,Hackathon_kori - Niaz Nafi.zip
+102,HackUS,Shahjalal University of Science & Technology (SUST),Nadia,0,1900,0,0,19,0,0,hackus - Barnali Sarker Shoumita.zip
+103,meow_meow,Shahjalal University of Science & Technology (SUST),MD MEHEDI HASAN,0,1900,0,0,19,0,0,meow_meow - Mehedi Hasan.zip
+104,NeuraCryptix,Jashore University of Science and Technology,Tanvir Mahtab Tafhim,0,1900,0,0,19,0,0,neuracryptix - Oveshak Toton.zip
+105,NeuraGPT,Green University of Bangladesh,Md. Abu Rayhan Imran,0,1900,0,0,19,0,0,neuragpt - Md. Fahad Hasan GUB.zip
+106,NeuroNinjas,Chittagong University of Engineering and Technology (CUET),S.M. Shahriar,0,1900,0,0,19,0,0,neuroninjas - Farhan Tanvir.zip
+107,PCIU_69Epochs,Port City International University,Md. Akibur Rahman,0,1900,0,0,19,0,0,pciu_69epochs - MD. AKIBUR RAHMAN.zip
+108,Photon,Green University of Bangladesh,Farhan Sadik,0,1900,0,0,19,0,0,photon - Farhan Sadik GUB.zip
+109,Quasar,Chittagong University of Engineering and Technology (CUET),Adiba Fairooz Chowdhury,0,1900,0,0,19,0,0,quasar - MD. SAGOR CHOWDHURY 2004010.zip
+110,Runtime Raiders,BRAC University,Istiak Ahmmed Bishal,0,1900,0,0,19,0,0,runtime_raiders - Istiak Ahmmed Bishal.zip
+111,Rush_Runners,Shahjalal University of Science & Technology (SUST),AL AMIN HOSSAIN,0,1900,0,0,19,0,0,Rush_Runners - AL AMIN HOSSAIN.zip
+112,SEU_Debdash,Southeast University,Md. Nasir Uddin,0,1900,0,0,19,0,0,seu_debdash - Md. Nasir Uddin.zip
+113,Sleepy Heads,Shahjalal University of Science & Technology (SUST),Sumaiya Rahman,0,1900,0,0,19,0,0,Sleepy_Heads - Sumaiya Rahman.zip
+114,SWE LogicLords,Shahjalal University of Science & Technology (SUST),Kawsar Ahmmed Hridoy,0,1900,0,0,19,0,0,swe_logiclords - Kawsar Ahmmed Hridoy.zip
+115,Team Eternity,Green University of Bangladesh,Sakibul Hasan,0,1900,0,0,19,0,0,team_eternity - Siam Ahmed.zip
+116,Team HackHawks,Green University of Bangladesh,Johirul Islam Niloy,0,1900,0,0,19,0,0,team_hackhawks - Tasnimul Hasan Himel.zip
+117,Team Rocket,Green University of Bangladesh,Md Asif Ikbal,0,1900,0,0,19,0,0,team_rocket - Asif Ikbal.zip
+118,Team_SuperNovas,United International University (UIU),Rezaur Rahman Ratul,0,1900,0,0,19,0,0,team_supernovas - Rezaur Rahman Ratul.zip
+119,TeamDestiny,University of Chittagong,Imran Farid,0,1900,0,0,19,0,0,teamdestiny - IMRAN FARID (1).zip
+120,The AIgineers,Green University of Bangladesh,Majharul Islam,0,1900,0,0,19,0,0,the_aigineers - Majharul Islam.zip
+121,The LumiNos,BRAC University,Niloy Sarkar,0,1900,0,0,19,0,0,the_luminos - Niloy.zip
+122,The Root Access,Daffodil International University (DIU),MD.Nahidur Rahman Khan Nishat,0,1900,0,0,19,0,0,the_root_access - Nishat Khan (1).zip
+123,Three Musketeers,BRAC University,Anindya Dasgupta,0,1900,0,0,19,0,0,three_musketeers - Md. Nabil Thahamid Chowdhury (1).zip
+124,TriFusion,Shahjalal University of Science & Technology (SUST),Rafid Adib,0,1900,0,0,19,0,0,trifusion - Al Fahad Shanto.zip

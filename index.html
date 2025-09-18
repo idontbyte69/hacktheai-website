@@ -121,13 +121,14 @@
             </div>
             <div class="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
+                <a href="#rankings" class="nav-link">Rankings</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#prizes" class="nav-link">Prizes</a>
                 <a href="#timeline" class="nav-link">Timeline</a>
                 <a href="#gallery" class="nav-link">Gallery</a>
-                <a href="#videos" class="nav-link">Videos</a>
-                <a href="#categories" class="nav-link">Categories</a>
                 <a href="#organizers" class="nav-link">Organizers</a>
+                <!-- <a href="#videos" class="nav-link">Videos</a> -->
+                <a href="#categories" class="nav-link">Categories</a>
                 <a href="#faq" class="nav-link">FAQ</a>
             </div>
             <div class="nav-toggle">
@@ -190,7 +191,101 @@
             <div class="scroll-arrow"></div>
         </a>
     </section>
+    <section id="rankings" class="rankings">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preliminary Rankings</h2>
+                <div class="title-underline"></div>
+                <p class="rankings-subtitle">Top 89 teams from the preliminary round. Top 50 teams will advance to the final round.</p>
+            </div>
+            
+            <div class="rankings-info">
+                <div class="rankings-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>89 Teams</h3>
+                            <p>Top ranked teams from preliminary round</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>50 Finalists</h3>
+                            <p>Teams advancing to the final round</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Multiple Universities</h3>
+                            <p>Representing institutions across Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="rankings-container">
+                <div class="rankings-filters">
+                    <div class="filter-group">
+                        <label for="university-filter">Filter by University:</label>
+                        <select id="university-filter" class="filter-select">
+                            <option value="">All Universities</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="search-team">Search Team:</label>
+                        <input type="text" id="search-team" class="filter-input" placeholder="Enter team name...">
+                    </div>
+                </div>
+
+                <div class="rankings-table-container">
+                    <table class="rankings-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Team Name</th>
+                                <th>University</th>
+                                <th>Team Leader</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rankings-tbody">
+                            <!-- Rankings will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="rankings-pagination">
+                    <button id="prev-page" class="pagination-btn" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    <span id="page-info" class="page-info">Page 1 of 5</span>
+                    <button id="next-page" class="pagination-btn">
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="rankings-note">
+                <div class="note-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="note-content">
+                    <h4>Important Information</h4>
+                    <p>The top 50 teams from this preliminary ranking will advance to the final round of Hack The AI. Teams are ranked based on their performance in the preliminary round, with scores calculated from problem-solving accuracy and efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- Registration Details Section -->
     <section id="registration" class="registration">
@@ -906,6 +1001,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Preliminary Rankings Section -->
+
 
     <!-- FAQ Section -->
     <section id="faq" class="faq">
